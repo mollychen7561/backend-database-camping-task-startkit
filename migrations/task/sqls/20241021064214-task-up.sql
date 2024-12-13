@@ -145,7 +145,7 @@ WHERE user_id = (
 
 -- 2. 教練`Q太郎` 的經驗年數為5年
 UPDATE "COACH"
-SET experience_years = 3
+SET experience_years = 5
 WHERE user_id = (
 	SELECT id
 	FROM "USER"
@@ -208,13 +208,13 @@ VALUES
 (
 	(SELECT id FROM "USER" WHERE email = 'wXlTq@hexschooltest.io'),
 	(SELECT id FROM "COURSE" WHERE user_id = (SELECT id FROM "USER" WHERE email = 'lee2000@hexschooltest.io')),
-	'2024-11-24 14:00:00',
+	'2024-11-24 16:00:00',
 	'即將授課'
 ),
 (
 	(SELECT id FROM "USER" WHERE email = 'richman@hexschooltest.io'),
 	(SELECT id FROM "COURSE" WHERE user_id = (SELECT id FROM "USER" WHERE email = 'lee2000@hexschooltest.io')),
-	'2024-11-24 14:00:00',
+	'2024-11-24 16:00:00',
 	'即將授課'
 );
 
